@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>T.J. Liggett</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/font-awesome.min.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+        <script src="https://kit.fontawesome.com/1f12bb3f34.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">CODE TJ</a>
+            <a class="nav-link" href="#">EXPERIENCE</a>
+            <a class="nav-link" href="#">EDUCATION</a>
+            <a class="nav-link" href="#">PROJECTS</a>
+            <a class="nav-link" href="#">CONTACT</a>
+        </header>
+        <h1>This is the template</h1>
+        <br>
+        {% block content %}{% endblock %}
+        <br>
+        <h2>templatastic!</h2>
+    </body>
+</html>

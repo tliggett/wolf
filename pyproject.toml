@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "wolf"
+version = "0.1.0"
+description = ""
+authors = ["TJ Liggett <tliggett@sonifi.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+flask = "^1.1.2"
+taskipy = "^1.3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.taskipy.tasks]
+start_container_build = "task build_container && task run_container"
+build_container = "docker build --tag wolf ."
+run_container = "docker run -d -p 5000:5000 wolf"
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
